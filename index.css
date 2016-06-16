@@ -1,0 +1,22 @@
+.container {
+	display:flex;
+	display:-webkit-flex;
+}
+
+div#c { -webkit-flex:2; flex:2 ; height:98%; overflow-y: auto;overflow-x:hidden;padding-right:30px}
+div#en { -webkit-flex:3; flex:3 ; height:98%; overflow-y: auto;overflow-x:hidden;padding-right:30px}
+div#es { -webkit-flex:3; flex:3 ; height:98%; overflow-y: auto;overflow-x:hidden;padding-right:30px}
+
+en, es, c {
+	display:inline;
+	font-size:200%;
+}
+
+en:before, es:before, c:before {
+	content : attr(n) "." ; color:green; background-color:silver; border-radius: 50%
+}
+
+en:after, es:after , c:after {
+	content : "\a";
+	white-space:pre;
+}
